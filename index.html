@@ -1,11 +1,122 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Quiz</title>
-</head>
-<body>
-    
-</body>
+
+    <!-- head start -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>JS Quiz</title>
+
+    </head>
+
+    <!-- body start -->
+    <body class="bg-white">
+        <!-- top nav bar -->
+        <div class="row p-2 mx-2">
+            <div class="col-sm-6 text-left d-flex justify-content-start">
+                <h4 id="highscores"><a href="highscores.html" class="" style="text-decoration: none;">View high scores</a></h4>
+            </div>
+            <div class="col-sm-6 text-right d-flex justify-content-end float-right">
+                <h4 id="timer">Time Remaining: 75</h4>
+            </div>
+        </div>
+
+        <div class="container bg-white w-50 p-3">
+
+            <!-- startQuiz begin -->
+            <section id="startQuiz" class="text-center">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Coding Quiz Challenge</h1>
+                        <h4 id="qTitle" class="text-justify p-3 m-3">Try to answer the following code-related questions within the time limit. Keep in mind that
+                            incorrect answers will penalize your score/time by ten seconds!
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-primary rounded-pill" id="btnStartQuiz">Start Quiz</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- quiz body. contains questions to answer -->
+            <section id="quizBody" class= "d-none"> 
+                <div class="row p-1">
+                    <div class="col m-2" >
+                        <h2 id="Question"></h2>
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block text-left" id="btn1"></button>
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block text-left" id="btn2"></button>
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block text-left" id="btn3"></button>
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block text-left" id="btn4"></button>
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-6">
+                        <h3 id="result"></h3>                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- final score section -->
+            <section id="finalScore" class= "d-none">
+
+                <div class="row p-1">                    
+                    <div class="col-12 text-left">
+                        <h2 id="quizComplete"></h2>
+                        <h6 id="scoreValue"></h6>
+                    </div>
+                </div>
+
+                <div class="row text-left">
+                    <div class="col-12 text-left">
+                        <label for="YourInitials">Enter initials:</label>
+                        <input type="text" name="YourInitials" id="userInitials">
+                        <button type="submit" class="btn btn-primary btn-sm" id="submitBtn">Submit</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- script section start -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <!-- custom java script -->
+        <script src="assets/js/questions.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>
